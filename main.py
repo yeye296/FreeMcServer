@@ -560,7 +560,7 @@ def handle_turnstile_verification(sb, account_index: int, result: Dict,
                 safe_screenshot(
                     sb,
                     screenshot_path(account_index,
-                                    f"turnstile-reload-{mask_server_id(server_id)}-r{page_round}"),
+                                    f"turnstile-reload-{server_id}-r{page_round}"),
                     result
                 )
             except Exception as e:
@@ -603,7 +603,7 @@ def handle_turnstile_verification(sb, account_index: int, result: Dict,
             safe_screenshot(
                 sb,
                 screenshot_path(account_index,
-                                 f"turnstile-success-{mask_server_id(server_id)}-r{page_round}"),
+                                 f"turnstile-success-{server_id}-r{page_round}"),
                 result
             )
             return True
@@ -816,7 +816,7 @@ def renew_server(sb, server_id: str, server_name: str, account_index: int, resul
         safe_screenshot(
             sb,
             screenshot_path(account_index,
-                             f"08-renew-page-{mask_server_id(server_id)}-a{renew_attempt}"),
+                             f"08-renew-page-{server_id}-a{renew_attempt}"),
             result
         )
 
@@ -912,7 +912,7 @@ def renew_server(sb, server_id: str, server_name: str, account_index: int, resul
         safe_screenshot(
             sb,
             screenshot_path(account_index,
-                             f"10-renew-after-click-{mask_server_id(server_id)}-a{renew_attempt}"),
+                             f"10-renew-after-click-{server_id}-a{renew_attempt}"),
             result
         )
 
@@ -931,7 +931,7 @@ def renew_server(sb, server_id: str, server_name: str, account_index: int, resul
             safe_screenshot(
                 sb,
                 screenshot_path(account_index,
-                                 f"11-renew-success-{mask_server_id(server_id)}-a{renew_attempt}"),
+                                 f"11-renew-success-{server_id}-a{renew_attempt}"),
                 result
             )
             try:
